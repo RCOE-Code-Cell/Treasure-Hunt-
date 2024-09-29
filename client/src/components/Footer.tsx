@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import { cn } from "@/lib/utils";
+import { cn } from  "@/lib/utils";
 import { Tooltip } from "@/components/Tooltip";
 import { motion } from "framer-motion";
 
 
 function Footer({ className }: { className?: string }) {
   return (
-    <footer className={cn(" text-neutral-500 py-6 bg-dot-white/[0.2]", className)}>
+    <footer className={cn(" text-neutral-500 py-6", className)}>
       <div className="max-w-6xl mx-auto px-4 ">
         <div className=" gap-8 flex justify-around ">
           <div className="space-y-4 w-[40%] grid-cols-1">
