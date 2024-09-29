@@ -14,10 +14,11 @@ function Navbar({ className }: { className?: string }) {
     <Link href="/">
       <MenuItem setActive={setActive} active={active} item="Home" />
     </Link>
+    <Link href="/Digital-Quiz">
     <MenuItem setActive={setActive} active={active} item="Digital-Quiz">
      
     </MenuItem>
-    
+    </Link>
     <MenuItem setActive={setActive} active={active} item="Live-Stats">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 text-sm sm:text-base">
         <ProductItem
@@ -33,8 +34,8 @@ function Navbar({ className }: { className?: string }) {
           description="position of the teams in the leaderboard."
         />
         <ProductItem
-          title="Admin page"
-          href="/admin"
+          title="CC-assist"
+          href="/CC-assist"
           src="https://plus.unsplash.com/premium_photo-1661302846246-e8faef18255d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           description="Admin page to manage the treasure hunt."
         />
