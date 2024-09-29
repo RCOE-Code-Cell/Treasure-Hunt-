@@ -36,6 +36,9 @@ class LoginView(APIView):
 
         if not user.is_active:
             raise AuthenticationFailed('Account not activated. Please verify your email.')
+        if not user.is_staff:
+            raise AuthenticationFailed('Only staff can access this.')
+
 
         payload = {
             'id': user.id,
