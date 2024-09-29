@@ -13,12 +13,7 @@ services:
     restart: always
     networks:
       - nutri-scan
-    command: ["sh", "-c", "npm run server & npm run dev"]
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:7500"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+    command: ["sh", "-c", "npm run dev"]
 
   django:
     build:
