@@ -10,3 +10,5 @@ class Groups(models.Model):
     round4 = models.BooleanField(default=False)  #5 teams
     winner = models.BooleanField(default=False)  #1 teams
 
+    def __str__(self) :
+        return self.group_name

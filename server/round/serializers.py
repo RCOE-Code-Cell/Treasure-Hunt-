@@ -4,7 +4,7 @@ from .models import Groups
 class TotalGroupsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Groups
-        fields = ['group_name']
+        fields = ['id', 'group_name', 'leader_name', 'group_email', 'round1', 'round2', 'round3', 'round4', 'winner']
 
 class Round1SelectedSerializer(serializers.ModelSerializer):
     class Meta:
