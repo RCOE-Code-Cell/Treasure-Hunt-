@@ -1,26 +1,27 @@
-
-import type { Metadata } from "next";
+"use client";
+import Navbar from "@/components/Navbar";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-const inter = Inter({ subsets: ["latin"] });
-export const metadata: Metadata = {
-  title: "Treasure Hunt",
-  description: "Find the treasure and win exciting prizes",
-};
+import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  
+const inter = Inter({ subsets: ["latin"] });
+
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Navbar className="top-9"/>
-      {children}
-    </body>
-  </html>
+        <main className="overflow-x-hidden">
+          <Navbar className="top-9" />
+          <div className="min-h-screen">
+            {children}
+          </div>
+        </main>
+      </body>
+    </html>
   );
 }
